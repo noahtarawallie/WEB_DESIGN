@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Academy of Sierra Leone - Matches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ----------  COMMON CSS  ---------- */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+        body{background:#f5f5f5;color:#333;line-height:1.6}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        header{background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff;padding:20px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:24px;font-weight:bold;display:flex;align-items:center}
+        .logo i{margin-right:10px;font-size:28px}
+        nav ul{display:flex;list-style:none}
+        nav ul li{margin-left:20px}
+        nav ul li a{color:#fff;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:4px;transition:background .3s}
+        nav ul li a:hover,nav ul li a.active{background:rgba(255,255,255,.2);color:#ffcc00}
+        .btn{display:inline-block;background:#ffcc00;color:#333;padding:12px 25px;border-radius:5px;text-decoration:none;font-weight:bold;transition:background .3s}
+        .btn:hover{background:#ffd633}
+        section{padding:60px 0}
+        .section-title{text-align:center;margin-bottom:40px;position:relative}
+        .section-title::after{content:'';display:block;width:80px;height:4px;background:#2a5298;margin:10px auto}
+        footer{background:#1e3c72;color:#fff;text-align:center;padding:30px 0}
+        .footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .copyright{margin-top:20px;width:100%;font-size:14px;opacity:.8}
+        @media(max-width:768px){
+            .header-content{flex-direction:center;text-align:center}
+            nav ul{margin-top:15px;justify-content:center;flex-wrap:wrap}
+            nav ul li{margin:5px 10px}
+        }
+
+        /* ----------  MATCHES-SPECIFIC CSS  ---------- */
+        .page-title{background:linear-gradient(rgba(30,60,114,.8),rgba(30,60,114,.9)),url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;color:#fff;text-align:center;padding:80px 0;margin-bottom:40px}
+        .page-title h1{font-size:48px;margin-bottom:10px;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
+        .page-title p{font-size:18px;max-width:600px;margin:0 auto}
+        .matches-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-bottom:60px}
+        .match-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}
+        .match-card:hover{transform:translateY(-5px)}
+        .match-header{background:#1e3c72;color:#fff;padding:15px;text-align:center}
+        .match-teams{display:flex;justify-content:space-between;align-items:center;padding:25px 20px}
+        .team{text-align:center;flex:1}
+        .team-logo{width:80px;height:80px;background:#f0f0f0;border-radius:50%;margin:0 auto 15px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#1e3c72}
+        .team-name{font-weight:bold;font-size:18px}
+        .vs{font-weight:bold;font-size:24px;color:#1e3c72;margin:0 15px}
+        .match-details{padding:20px;background:#f9f9f9;border-top:1px solid #eee}
+        .match-detail{display:flex;align-items:center;margin-bottom:10px}
+        .match-detail i{width:20px;margin-right:10px;color:#1e3c72}
+        .info-sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px}
+        .info-card{background:#fff;border-radius:10px;padding:25px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+        .info-card h2{color:#1e3c72;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid #ffcc00}
+        .news-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #eee}
+        .news-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+        .news-item h3{color:#1e3c72;margin-bottom:10px}
+        .ticket-info{background:#1e3c72;color:#fff;padding:15px;border-radius:5px;margin-top:15px}
+        .ticket-info p{margin-bottom:10px}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="matches.html" class="active">Matches</a></li>
+                    <li><a href="players.html">players</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">FContact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="page-title">
+    <div class="container">
+        <h1>UPCOMING MATCHES</h1>
+        <p>Follow our teams as they compete in national and international tournaments</p>
+    </div>
+</section>
+
+<section class="matches-section">
+    <div class="container">
+        <div class="matches-grid">
+            <div class="match-card">
+                <div class="match-header"><h3>PREMIER LEAGUE MATCH</h3></div>
+                <div class="match-teams">
+                    <div class="team"><div><img src="https://i.pinimg.com/736x/8a/59/7e/8a597e41a903f96ce45d1e768cb15c5f.jpg" alt=""width="98"></div><div class="team-name">ZOMA FC</div></div>
+                    <div class="vs">VS</div>
+                    <div class="team"><div><img src="https://i.pinimg.com/1200x/83/66/af/8366afc35999503d87285a20b45ab081.jpg" alt=""width="98"></div><div class="team-name">Soccer sport FC</div></div>
+                </div>
+                <div class="match-details">
+                    <div class="match-detail"><i class="far fa-calendar"></i><span>Saturday 18th October</span></div>
+                    <div class="match-detail"><i class="far fa-clock"></i><span>15:00 GMT</span></div>
+                    <div class="match-detail"><i class="fas fa-map-marker-alt"></i><span>Big Boyz Arena</span></div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header"><h3>NATIONAL CUP QUARTERFINALS</h3></div>
+                <div class="match-teams">
+                    <div class="team"><div><img src="https://i.pinimg.com/1200x/61/0b/82/610b827cef78d41433de010fee6f2aed.jpg" alt=""width="98"></div><div class="team-name">Liberia Camp FC</div></div>
+                    <div class="vs">VS</div>
+                    <div class="team"><div><img src="https://i.pinimg.com/1200x/b5/9a/65/b59a65190748f5f1440ed7c4460dbc56.jpg" alt=""width="98"></div><div class="team-name">Ephoto FC</div></div>
+                </div>
+                <div class="match-details">
+                    <div class="match-detail"><i class="far fa-calendar"></i><span>Tuesday 21st October</span></div>
+                    <div class="match-detail"><i class="far fa-clock"></i><span>18:00 GMT</span></div>
+                    <div class="match-detail"><i class="fas fa-map-marker-alt"></i><span>National Stadium</span></div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header"><h3>CHAMPIONSHIP MATCH</h3></div>
+                <div class="match-teams">
+                    <div class="team"><div><img src="https://i.pinimg.com/1200x/9c/12/ef/9c12eff99a26017cf2ab102d41721529.jpg" alt=""width="98"></div><div class="team-name">Your Football FC</div></div>
+                    <div class="vs">VS</div>
+                    <div class="team"><div><img src="https://i.pinimg.com/1200x/db/1b/ab/db1babb95b00e5f0235617851d3682ad.jpg" alt=""width="98"></div><div class="team-name">Guangzhou FC</div></div>
+                </div>
+                <div class="match-details">
+                    <div class="match-detail"><i class="far fa-calendar"></i><span>Sunday 18th December</span></div>
+                    <div class="match-detail"><i class="far fa-clock"></i><span>21:00 GMT</span></div>
+                    <div class="match-detail"><i class="fas fa-map-marker-alt"></i><span>Sinka Stevens Arena</span></div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header"><h3>NEW YEAR SPECIAL</h3></div>
+                <div class="match-teams">
+                    <div class="team"><div><img src="https://i.pinimg.com/736x/c8/71/92/c871929616d5575a135e6ca09e0c23f6.jpg" alt=""width="98"></div><div class="team-name">Eagle FC</div></div>
+                    <div class="vs">VS</div>
+                    <div class="team"><div><img src="https://i.pinimg.com/736x/83/c2/64/83c2648170276c460351205df7c36e34.jpg" alt=""width="98"></div><div class="team-name">Falcon FC</div></div>
+                </div>
+                <div class="match-details">
+                    <div class="match-detail"><i class="far fa-calendar"></i><span>Sunday 1st January</span></div>
+                    <div class="match-detail"><i class="far fa-clock"></i><span>15:00 GMT</span></div>
+                    <div class="match-detail"><i class="fas fa-map-marker-alt"></i><span>Southern Arena</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-sections">
+            <div class="info-card">
+                <h2>NEWS AND VIDEO</h2>
+                <div class="news-item">
+                    <h3>Leone Stars Prepare for Crucial Match</h3>
+                    <p>The Leone Stars are intensifying their training sessions ahead of the important match against African Icons this weekend.</p>
+                    <a href="#" class="btn">Watch Video</a>
+                </div>
+                <div class="news-item">
+                    <h3>New Talent Emerging in Youth League</h3>
+                    <p>Several young players have shown exceptional skills in the recent youth league matches, catching the attention of national selectors.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>TICKETS INFO</h2>
+                <p>Secure your tickets for upcoming matches through our official channels:</p>
+                <div class="ticket-info">
+                    <p><i class="fas fa-ticket-alt"></i> Available at any Community Football Center Nation Wide</p>
+                    <p><i class="fas fa-globe"></i> Online through our Official Website</p>
+                    <p><i class="fas fa-mobile-alt"></i> Mobile app booking available</p>
+                </div>
+                <a href="#" class="btn">Buy Tickets Now</a>
+
+                <h2 style="margin-top:30px;">SKY NEWS</h2>
+                <p>Stay updated with the latest football news and match analyses on Sky News Sports Channel.</p>
+                <p>Match highlights and expert commentary available after each game.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <div class="copyright">&copy; 2025 Football Academy of Sierra Leone. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+/* ----------  SIMPLE PAGE CONNECTOR  ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelectorAll('nav ul li a');
+  nav.forEach(link => {
+    link.addEventListener('click', e => {
+      nav.forEach(a => a.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+  });
+});
+</script>
+</body>
+</html>
