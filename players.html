@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Academy of Sierra Leone - Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ----------  COMMON CSS  ---------- */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+        body{background:#f5f5f5;color:#333;line-height:1.6}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        header{background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff;padding:20px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:24px;font-weight:bold;display:flex;align-items:center}
+        .logo i{margin-right:10px;font-size:28px}
+        nav ul{display:flex;list-style:none}
+        nav ul li{margin-left:20px}
+        nav ul li a{color:#fff;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:4px;transition:background .3s}
+        nav ul li a:hover,nav ul li a.active{background:rgba(255,255,255,.2);color:#ffcc00}
+        .btn{display:inline-block;background:#ffcc00;color:#333;padding:12px 25px;border-radius:5px;text-decoration:none;font-weight:bold;transition:background .3s}
+        .btn:hover{background:#ffd633}
+        section{padding:60px 0}
+        .section-title{text-align:center;margin-bottom:40px;position:relative}
+        .section-title::after{content:'';display:block;width:80px;height:4px;background:#2a5298;margin:10px auto}
+        footer{background:#1e3c72;color:#fff;text-align:center;padding:30px 0}
+        .footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .copyright{margin-top:20px;width:100%;font-size:14px;opacity:.8}
+        @media(max-width:768px){
+            .header-content{flex-direction:center;text-align:center}
+            nav ul{margin-top:15px;justify-content:center;flex-wrap:wrap}
+            nav ul li{margin:5px 10px}
+        }
+
+        /* ----------  TEAM-SPECIFIC CSS  ---------- */
+        .page-title{background:linear-gradient(rgba(30,60,114,.8),rgba(30,60,114,.9)),url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;color:#fff;text-align:center;padding:80px 0;margin-bottom:40px}
+        .page-title h1{font-size:48px;margin-bottom:10px;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
+        .page-title p{font-size:18px;max-width:600px;margin:0 auto}
+        .position-section{margin-bottom:60px}
+        .position-title{text-align:center;margin-bottom:30px;position:relative;color:#1e3c72}
+        .position-title::after{content:'';display:block;width:100px;height:4px;background:#ffcc00;margin:10px auto}
+        .players-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+        .player-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s;text-align:center}
+        .player-card:hover{transform:translateY(-5px)}
+        .player-number{background:#1e3c72;color:#fff;font-size:24px;font-weight:bold;padding:10px}
+        .player-photo{height:200px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#777;font-size:60px}
+        .player-info{padding:20px}
+        .player-name{font-size:20px;font-weight:bold;margin-bottom:5px;color:#1e3c72}
+        .player-age{color:#666;margin-bottom:15px}
+        .player-stats{display:flex;justify-content:space-around;background:#f9f9f9;padding:10px;border-radius:5px}
+        .stat{text-align:center}
+        .stat-value{font-weight:bold;font-size:18px;color:#1e3c72}
+        .stat-label{font-size:12px;color:#666}
+        .social-section{text-align:center;padding:40px 0;background:#f9f9f9;margin-top:40px}
+        .social-links{display:flex;justify-content:center;gap:20px}
+        .social-links a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:#2a5298;color:#fff;border-radius:50%;text-decoration:none;transition:background .3s}
+        .social-links a:hover{background:#1e3c72}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="matches.html">Matches</a></li>
+                    <li><a href="players.html" class="active">players</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="page-title">
+    <div class="container">
+        <h1>OUR TEAM</h1>
+        <p>Meet the talented players representing the Football Academy of Sierra Leone</p>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="container">
+        <!-- GOALKEEPERS -->
+        <div class="position-section">
+            <h2 class="position-title">GOALKEEPERS</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-number">1</div>
+                    <div><img src="https://i.pinimg.com/736x/6d/80/97/6d8097fcacd4ca97d34a49dee5596e41.jpg" alt="picture"width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Abdul Karajab</h3>
+                        <p class="player-age">15 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">42</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">18</div><div class="stat-label">Clean Sheets</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">25</div>
+                    <div><img src="https://i.pinimg.com/736x/6e/66/7d/6e667d2c2c5c3a1d503ca171e6460fd0.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">meech Kamara</h3>
+                        <p class="player-age">16 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">15</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">7</div><div class="stat-label">Clean Sheets</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">33</div>
+                    <div><img src="https://i.pinimg.com/736x/0c/e5/20/0ce520c8de79e3a64e78d3c5eb7be071.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Ramir Joe</h3>
+                        <p class="player-age">14 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">28</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">12</div><div class="stat-label">Clean Sheets</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEFENDERS -->
+        <div class="position-section">
+            <h2 class="position-title">DEFENDERS</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-number">2</div>
+                    <div><img src="https://i.pinimg.com/1200x/7b/b6/16/7bb616d50976cd65b27e2391cbda80d9.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Eric Tarowalle</h3>
+                        <p class="player-age">13 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">38</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">4</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">4</div>
+                    <div><img src="https://i.pinimg.com/1200x/2d/88/fc/2d88fc27dbaeb0b4941640e5bc70362c.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">John Barber</h3>
+                        <p class="player-age">18 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">45</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">2</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">6</div>
+                    <div><img src="https://i.pinimg.com/1200x/72/09/48/7209484a9a08f1adb16e79568186a60d.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Bakalay Keh</h3>
+                        <p class="player-age">15 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">32</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">1</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MIDFIELDERS -->
+        <div class="position-section">
+            <h2 class="position-title">MIDFIELDERS</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-number">7</div>
+                    <div><img src="https://i.pinimg.com/1200x/bd/d0/1b/bdd01bb43cf274a0e460c7cb883a79aa.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Amedu Bali</h3>
+                        <p class="player-age">16 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">40</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">8</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">8</div>
+                    <div><img src="https://i.pinimg.com/736x/d4/b1/a4/d4b1a4b1a63323268f3ee93aa4f5998f.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Tirachim Jamneh</h3>
+                        <p class="player-age">26 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">42</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">6</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">3</div>
+                    <div><img src="ge.jpg" alt="picture"width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Prof Geriad</h3>
+                        <p class="player-age">23 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">35</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">5</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORWARDS -->
+        <div class="position-section">
+            <h2 class="position-title">FORWARDS</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-number">14</div>
+                    <div><img src="j.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Frank J Williams</h3>
+                        <p class="player-age">15 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">38</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">15</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">11</div>
+                    <div><img src="fr.jpg" alt="picture"width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Francise Masaque</h3>
+                        <p class="player-age">19 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">36</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">12</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-number">9</div>
+                    <div><img src="https://i.pinimg.com/1200x/39/93/07/399307318e96b811f46602e1db192c61.jpg" alt=""width="200"></div>
+                    <div class="player-info">
+                        <h3 class="player-name">Idrisad Kanu</h3>
+                        <p class="player-age">17 years</p>
+                        <div class="player-stats">
+                            <div class="stat"><div class="stat-value">45</div><div class="stat-label">Matches</div></div>
+                            <div class="stat"><div class="stat-value">18</div><div class="stat-label">Goals</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="social-section">
+    <div class="container">
+        <h2>Follow Us On @FASL</h2>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <div class="copyright">&copy; 2025 Football Academy of Sierra Leone. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+/* ----------  SIMPLE PAGE CONNECTOR  ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelectorAll('nav ul li a');
+  nav.forEach(link => {
+    link.addEventListener('click', e => {
+      nav.forEach(a => a.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+  });
+});
+</script>
+</body>
+</html>
