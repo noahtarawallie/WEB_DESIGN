@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Academy of Sierra Leone - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ----------  COMMON CSS  ---------- */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+        body{background:#f5f5f5;color:#333;line-height:1.6}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        header{background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff;padding:20px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:24px;font-weight:bold;display:flex;align-items:center}
+        .logo i{margin-right:10px;font-size:28px}
+        nav ul{display:flex;list-style:none}
+        nav ul li{margin-left:20px}
+        nav ul li a{color:#fff;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:4px;transition:background .3s}
+        nav ul li a:hover,nav ul li a.active{background:rgba(255,255,255,.2);color:#ffcc00}
+        .btn{display:inline-block;background:#ffcc00;color:#333;padding:12px 25px;border-radius:5px;text-decoration:none;font-weight:bold;transition:background .3s}
+        .btn:hover{background:#ffd633}
+        section{padding:60px 0}
+        .section-title{text-align:center;margin-bottom:40px;position:relative}
+        .section-title::after{content:'';display:block;width:80px;height:4px;background:#2a5298;margin:10px auto}
+        footer{background:#1e3c72;color:#fff;text-align:center;padding:30px 0}
+        .footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .copyright{margin-top:20px;width:100%;font-size:14px;opacity:.8}
+        @media(max-width:768px){
+            .header-content{flex-direction:center;text-align:center}
+            nav ul{margin-top:15px;justify-content:center;flex-wrap:wrap}
+            nav ul li{margin:5px 10px}
+        }
+
+        /* ----------  HOME-SPECIFIC CSS  ---------- */
+        .hero{background:url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;height:500px;display:flex;align-items:center;position:relative}
+        .hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
+        .hero-content{position:relative;color:#fff;max-width:600px;padding:20px}
+        .hero-content h1{font-size:48px;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
+        .hero-content p{font-size:18px;margin-bottom:30px}
+        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+        .news-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}
+        .news-card:hover{transform:translateY(-10px)}
+        .news-img{height:200px;background:#ddd;display:flex;align-items:center;justify-content:center;color:#777}
+        .news-content{padding:20px}
+        .news-content h3{margin-bottom:10px;color:#2a5298}
+        .news-content p{margin-bottom:15px;color:#666}
+        .news-meta{display:flex;align-items:center;color:#888;font-size:14px}
+        .news-meta i{margin-right:5px}
+        .highlights{background:#f9f9f9}
+        .leagues{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+        .league-card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.05);text-align:center}
+        .league-card h3{color:#2a5298;margin-bottom:15px}
+        .league-table{width:100%;border-collapse:collapse;margin-top:15px}
+        .league-table th{background:#2a5298;color:#fff;padding:10px;text-align:left}
+        .league-table td{padding:10px;border-bottom:1px solid #eee}
+        .league-table tr:nth-child(even){background:#f5f5f5}
+        .partners{text-align:center}
+        .partner-logos{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;margin-top:30px}
+        .partner-logo{background:#fff;padding:20px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.05);min-width:150px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#555}
+        .social-links{display:flex;justify-content:center;margin-top:30px;gap:20px}
+        .social-links a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:#2a5298;color:#fff;border-radius:50%;text-decoration:none;transition:background .3s}
+        .social-links a:hover{background:#1e3c72}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html" class="active">Home</a></li>
+                    <li><a href="matches.html">Matches</a></li>
+                    <li><a href="players.html">players</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <a href="contact.html" class="btn">join us</a>
+            <h1>Noah's Developing Football Talent in Sierra Leone</h1>
+            <p>The governing body of football in Sierra Leone, developing players and promoting the sport nationwide.</p>
+            <a href="matches.html" class="btn">View Upcoming Matches</a>
+        </div>
+    </div>
+</section>
+
+<section class="news">
+    <div class="container">
+        <h2 class="section-title">Latest News</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <div><img src="https://i.pinimg.com/736x/14/b2/e4/14b2e4f3a3cbb26ad715f741716d028d.jpg" alt="picture"width="400"></div>
+                <div class="news-content">
+                    <h3>Learn More on Team Developmenth</h3>
+                    <p>Learn More shares insights on how the team could work on a soccer industry model for other industries.</p>
+                    <div class="news-meta"><i class="far fa-calendar"></i><span>November 15, 2025</span></div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div><img src="https://i.pinimg.com/1200x/0e/36/c2/0e36c23164d56da02da31d02c5beaafd.jpg" alt="picture"width="400"></div>
+                <div class="news-content">
+                    <h3>Unexpected Hit in Recent Match</h3>
+                    <p>A screen clip of Leon who was hit during the recent match against the national rivals.</p>
+                    <div class="news-meta"><i class="far fa-calendar"></i><span>November 12, 2025</span></div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div><img src="https://i.pinimg.com/1200x/0c/52/a8/0c52a856c7574586a3a9a7bced48a210.jpg" alt="picture"width="400"></div>
+                <div class="news-content">
+                    <h3>Player Achievements Recognized</h3>
+                    <p>Several players from our academy have been recognized for their outstanding performance this season.</p>
+                    <div class="news-meta"><i class="far fa-calendar"></i><span>November 8, 2025</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="container">
+        <h2 class="section-title">League Highlights</h2>
+        <div class="leagues">
+            <div class="league-card">
+                <h3>FASL Leagues</h3>
+                <table class="league-table">
+                    <thead><tr><th>Team Out</th><th>Status</th></tr></thead>
+                    <tbody>
+                    <tr><td>Player 15 League</td><td>1 person in football</td></tr>
+                    <tr><td>Scotland League</td><td>2 people in football</td></tr>
+                    <tr><td>Development League</td><td>Training phase</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="league-card">
+                <h3>Upcoming Matches</h3>
+                <table class="league-table">
+                    <thead><tr><th>Match</th><th>Date</th></tr></thead>
+                    <tbody>
+                    <tr><td>FASL vs. Eastern United</td><td>Nov 25, 2025</td></tr>
+                    <tr><td>Youth League Finals</td><td>Nov 28, 2025</td></tr>
+                    <tr><td>FASL All-Stars</td><td>Dec 2, 2025</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="container">
+        <h2 class="section-title">Our Partners And Sponsors</h2>
+        <div class="partner-logos">
+            <div class="partner-logo">PIPELINX</div>
+            <div class="partner-logo">ADAPTS STUDIO</div>
+            <div class="partner-logo">AEON FLUX</div>
+            <div class="partner-logo">RUPRO Inc.</div>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p style="margin-top:20px;">Follow Us On @FASL</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo"><i class="fas fa-futbol"></i><span>Football Academy of Sierra Leone</span></div>
+            <div class="copyright">&copy; 2025 Football Academy of Sierra Leone. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+/* ----------  SIMPLE PAGE CONNECTOR  ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelectorAll('nav ul li a');
+  nav.forEach(link => {
+    link.addEventListener('click', e => {
+      /* optional: keep active highlight */
+      nav.forEach(a => a.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+  });
+});
+</script>
+</body>
+</html>
